@@ -551,7 +551,7 @@ class Player {
                 if (buff.bleedmod)
                     this.bleedmod *= buff.bleedmod;
                 if (buff.armor) 
-                    this.target.basearmorbuffed -= buff.armor + (buff.name == "Expose Armor" && this.improvedexposed ? buff.armor * 0.5 : 0);
+                    this.target.basearmorbuffed -= buff.armor + ((buff.name == "Expose Armor" || buff.name == "Sebacious Poison") && this.improvedexposed ? buff.armor * 0.5 : 0);
                 if (buff.armorperlevel) 
                     this.target.basearmorbuffed -= (buff.armorperlevel * this.level);
                 if (buff.name == "Faerie Fire")
@@ -1384,8 +1384,13 @@ class Player {
         let batchedextras = 0;
         if (spell instanceof ThunderClap) return 0;
         if (spell instanceof ShieldSlam) {
-            if (result != RESULT.MISS && result != RESULT.DODGE &&  this.mode == "sod") {
-                this.auras.defendersresolve.use();
+            if (result != RESULT.MISS && result != RESULT.DODGE) {
+                if (this.mode == "sod") this.auras.defendersresolve.use();
+
+                // procs at least windfury - more info needed
+                if (weapon.windfury && !this.auras.windfury.timer && !damageSoFar && rng10k() < 2000) {
+                    weapon.windfury.use();
+                }
             }
             return 0;
         }

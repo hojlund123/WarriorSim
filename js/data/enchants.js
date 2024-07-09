@@ -1166,10 +1166,64 @@ var enchant = {
 {
   id: 1781,
   name: 'Spirit of Eskhandar',
-  items: [228350,228349,228360],
+  items: [228350,228349,228360,228759],
   bonus: [
      { count: 2, stats: { hit: 1 } },
      { count: 3, stats: { crit: 1, spellcrit: 1 } },
+  ]
+},
+{
+  id: 469,
+  name: 'The Highlander\'s Determination',
+  items: [20043,20050,20055],
+  bonus: [
+     { count: 2, stats: { sta: 5 } },
+     { count: 3, stats: { crit: 1 } },
+  ]
+},
+{
+  id: 468,
+  name: 'The Highlander\'s Resolve',
+  items: [20042,20049,20058],
+  bonus: [
+     { count: 2, stats: { sta: 5 } },
+     { count: 3, stats: { crit: 1 } },
+  ]
+},
+{
+  id: 471,
+  name: 'The Highlander\'s Purpose',
+  items: [20052,20045,20059],
+  bonus: [
+     { count: 2, stats: { sta: 5 } },
+     { count: 3, stats: { crit: 1 } },
+  ]
+},
+{
+  id: 472,
+  name: 'The Highlander\'s Will',
+  items: [20053,20046,20060],
+  bonus: [
+     { count: 2, stats: { sta: 5 } },
+     { count: 3, stats: { spellcrit: 1 } },
+  ]
+},
+{
+  id: 470,
+  name: 'The Highlander\'s Fortitude',
+  items: [20044,20051,20056],
+  bonus: [
+     { count: 2, stats: { sta: 5 } },
+     { count: 3, stats: { spellcrit: 1 } },
+  ]
+},
+{
+  id: 467,
+  name: 'The Highlander\'s Resolution',
+  items: [20041,20048,20057],
+  bonus: [
+     { count: 2, stats: { sta: 5 } },
+     { count: 3, stats: { crit: 1 } },
   ]
 },
 ];
