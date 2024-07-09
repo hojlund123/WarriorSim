@@ -214,7 +214,7 @@ SIM.PROFILES = {
             ${mode == "sod" ? 
                 `<div class="import-container">
                     <div class="import-gl" style="width: 100%;">Gladiator Stance</div>
-                    <div class="import-dw">50 DW Fury</div>
+                    <div class="import-dw">60 DW Fury</div>
                     <div class="import-th">50 2H Arms</div>
                 </div>` : ''}
             </div>
